@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoAI Pendidikan</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>Analisis Geospasial APS 2025</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" required>
+        <button type="submit">Analisis</button>
+    </form>
+
+    <hr>
+
+    <div style="height:600px;">
+        {{ map|safe }}
+    </div>
+</body>
+</html>
